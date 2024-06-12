@@ -1,0 +1,27 @@
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: $main-font;
+    color: $main-color;
+    line-height: 1.2;
+    background-color: #0c0d12;
+
+    &.is-menu {
+        overflow: hidden;
+    }
+}
+
+.container {
+    max-width: 113rem;
+    margin: 0 auto;
+
+    @media screen and (max-width: $breakpoint-md) {
+        max-width: 69rem;
+    }
+
+    @media screen and (max-width: $breakpoint-sm) {
+        max-width: 32rem;
+    }
+}
