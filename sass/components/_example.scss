@@ -40,10 +40,15 @@
 .example__item {
     position: relative;
     width: calc((100% - 6rem) / 3);
-    height: 24rem;
+    height: 20rem;
     overflow: hidden;
     border-radius: 1rem;
     cursor: pointer;
+
+    iframe {
+        width: 100%;
+        height: 100%;
+    }
 
     @media screen and (max-width: $breakpoint-md) {
         width: calc((100% - 3rem) / 2);
@@ -51,11 +56,36 @@
 
     @media screen and (max-width: $breakpoint-sm) {
         width: 100%;
-        height: 20rem;
+        height: 18rem;
     }
 
+    &:hover {
+        .example__name {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .example__poster::before {
+            background-color: rgba(12, 13, 18, 0.7294117647);
+        }
+
+        .example__play {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+.example__poster {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+
     &::before {
-        content: '';
+        content: "";
         position: absolute;
         top: 0;
         left: 0;
@@ -63,61 +93,44 @@
         height: 100%;
         box-shadow: inset 0 1rem 3rem #0c0d12;
         z-index: 1;
-        transition-duration: 600ms;
+        transition-duration: 300ms;
     }
 
-    &:hover {
-        .example__preview {
-            transform: scale(1.05);
-        }
-
-        &::before {
-            background-color: #0c0d12ba;
-        }
-
-        .example__name {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        .example__desc {
-            opacity: 1;
-            visibility: visible;
-        }
+    &.is-video {
+        opacity: 0;
+        visibility: hidden;
+        display: none;
     }
-}
 
-.example__preview {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    transition-duration: 600ms;
-}
-
-.example__desc {
-    position: absolute;
-    top: 2rem;
-    left: 2rem;
-    right: 2rem;
-
-    font-size: 1.4rem;
-    line-height: 1.4;
-    color: #c4c4c4;
-    z-index: 1;
-    transition-duration: 600ms;
-    opacity: 0;
-    visibility: hidden;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
 }
 
 .example__name {
     position: absolute;
-    bottom: 2rem;
+    top: 2rem;
     left: 2rem;
     z-index: 2;
 
-    font-size: 2rem;
-    transition-duration: 600ms;
+    font-size: 2.4rem;
+
+    transition-duration: 300ms;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.example__play {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 2;
+    width: 3.6rem !important;
+    height: 3.6rem !important;
+    transition-duration: 300ms;
     opacity: 0;
     visibility: hidden;
 }

@@ -40,6 +40,5 @@ anchorLinks.forEach(function (link) {
         e.preventDefault();
         const anchorId = this.getAttribute("href").substring(1);
         scrollToAnchor(anchorId);
-        // handleCloseMenu();
     });
 });
