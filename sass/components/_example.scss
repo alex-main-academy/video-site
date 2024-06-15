@@ -39,8 +39,8 @@
 
 .example__item {
     position: relative;
-    width: calc((100% - 6rem) / 3);
-    height: 20rem;
+    width: calc((100% - 3rem) / 2);
+    height: 31rem;
     overflow: hidden;
     border-radius: 1rem;
     cursor: pointer;
@@ -51,7 +51,7 @@
     }
 
     @media screen and (max-width: $breakpoint-md) {
-        width: calc((100% - 3rem) / 2);
+        height: 18.5rem;
     }
 
     @media screen and (max-width: $breakpoint-sm) {

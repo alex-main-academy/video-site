@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>About us</title>
     <meta name="description" content="Portfolio">
     <meta name="keywords" content="Portfolio">
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
@@ -21,13 +21,13 @@
             <nav class="header__navigation">
                 <ul class="header__list">
                     <li class="header__item">
-                        <a class="header__link active">HOME</a>
+                        <a href="index.html" class="header__link">HOME</a>
                     </li>
                     <li class="header__item">
                         <a href="works.html" class="header__link">WORKS</a>
                     </li>
                     <li class="header__item">
-                        <a href="about.html" class="header__link">ABOUT</a>
+                        <a class="header__link active">ABOUT</a>
                     </li>
                     <li class="header__item">
                         <a href="contacts.html" class="header__link">CONTACTS</a>
@@ -41,35 +41,11 @@
     </header>
 
     <main>
-        <section class="hero">
-            <div class="hero__bg">
-                <video src="video/background.mp4" class="hero__video" autoplay muted loop></video>
-            </div>
+        <section class="page">
             <div class="container">
-                <h1 class="hero__title">Welcome to our <br> VFX studio</h1>
-                <p class="hero__desc">
-                    Specializing in 3D animation and movie commercials, our team boasts over
-                    a decade of industry experience. We deliver complex CG sequences with a seamless workflow from
-                    pre-visualization to high-resolution final output. Our expertise enhances production with sharp
-                    artistic vision and a strong technical foundation. We pride ourselves on our agility, dedication,
-                    and passion for movies, consistently delivering high-quality results under tight deadlines.
-                </p>
-                <a href="#example" class="hero__link">
-                    <img src="img/arrow-down.png" alt="" width="44" height="44">
-                </a>
-            </div>
-        </section>
-
-        <section class="example" id="example">
-            <div class="container">
-                <h2 class="example__title">
-                    Example
-                </h2>
-                <ul class="example__list">
-                    <li class="example__item js-video-wrapper" data-video-id="941727496"></li>
-                    <li class="example__item js-video-wrapper" data-video-id="944014061"></li>
-                </ul>
-                <a href="works.html" class="example__all">See all</a>
+                <h1 class="page__title">
+                    About Us
+                </h1>
             </div>
         </section>
     </main>
@@ -78,13 +54,13 @@
         <div class="container">
             <ul class="menu__list">
                 <li class="menu__item">
-                    <a class="menu__link active">HOME</a>
+                    <a href="index.html" class="menu__link">HOME</a>
                 </li>
                 <li class="menu__item">
                     <a href="works.html" class="menu__link">WORKS</a>
                 </li>
                 <li class="menu__item">
-                    <a href="about.html" class="menu__link">ABOUT</a>
+                    <a class="menu__link active">ABOUT</a>
                 </li>
                 <li class="menu__item">
                     <a href="contacts.html" class="menu__link">CONTACTS</a>
@@ -93,9 +69,7 @@
         </div>
     </div>
 
-    <script src="https://player.vimeo.com/api/player.js"></script>
     <script defer src="js/main.js"></script>
-    <script defer src="js/video.js"></script>
 </body>
 
 </html>

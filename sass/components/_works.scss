@@ -1,0 +1,22 @@
+.page {
+    padding-top: 15rem;
+
+    @media screen and (max-width: $breakpoint-md) {
+        padding-top: 13rem;
+    }
+}
+
+.page__title {
+    font-size: 6rem;
+    font-weight: 500;
+    margin-bottom: 5rem;
+
+    @media screen and (max-width: $breakpoint-md) {
+        font-size: 4.6rem;
+        margin-bottom: 3rem;
+    }
+
+    @media screen and (max-width: $breakpoint-md) {
+        text-align: center;
+    }
+}

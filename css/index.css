@@ -196,6 +196,9 @@ body.is-menu {
 .header__link:hover::before {
   opacity: 1;
 }
+.header__link.active::before {
+  opacity: 1;
+}
 
 .header__burger {
   display: none;
@@ -338,8 +341,8 @@ body.is-menu {
 
 .example__item {
   position: relative;
-  width: calc((100% - 6rem) / 3);
-  height: 20rem;
+  width: calc((100% - 3rem) / 2);
+  height: 31rem;
   overflow: hidden;
   border-radius: 1rem;
   cursor: pointer;
@@ -350,7 +353,7 @@ body.is-menu {
 }
 @media screen and (max-width: 1200px) {
   .example__item {
-    width: calc((100% - 3rem) / 2);
+    height: 18.5rem;
   }
 }
 @media screen and (max-width: 767px) {
@@ -482,11 +485,52 @@ body.is-menu {
 .menu__list {
   display: flex;
   flex-direction: column;
-  gap: 2.4rem;
+  gap: 3rem;
 }
 
 .menu__link {
+  position: relative;
   text-decoration: none;
   font-size: 2rem;
   font-weight: 300;
+}
+.menu__link::before {
+  content: "";
+  position: absolute;
+  bottom: -0.4rem;
+  left: 0;
+  width: 100%;
+  height: 0.2rem;
+  background-color: #FFFFFF;
+  transition-duration: 300ms;
+  opacity: 0;
+}
+.menu__link.active::before {
+  opacity: 1;
+}
+
+.page {
+  padding-top: 15rem;
+}
+@media screen and (max-width: 1200px) {
+  .page {
+    padding-top: 13rem;
+  }
+}
+
+.page__title {
+  font-size: 6rem;
+  font-weight: 500;
+  margin-bottom: 5rem;
+}
+@media screen and (max-width: 1200px) {
+  .page__title {
+    font-size: 4.6rem;
+    margin-bottom: 3rem;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .page__title {
+    text-align: center;
+  }
 }/*# sourceMappingURL=index.css.map */
